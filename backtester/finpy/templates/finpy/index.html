@@ -1,0 +1,14 @@
+{% extends "finpy/base.html" %}
+{% block title %} Backtester {% endblock %}
+
+{% block body_block %}
+
+  <form class="form-inline" id="stock_form" method="post" action="/finpy/plotter/">
+
+    {% csrf_token %}
+    <input class="form-control" type="text" size="50" name="stockquery" value="" id="query" />
+    <input class="btn btn-primary" type="submit" name="stocksubmit" value="Search" />
+
+  </form>
+
+{% endblock %}

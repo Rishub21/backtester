@@ -1,0 +1,13 @@
+{% extends "finpy/base.html" %}
+{% block title %} Backtester {% endblock %}
+
+{% block body_block %}
+
+<form class = "form-inline" id= "portfolio_constructor" method = "post" action=  "/rango/search/">
+  {% crsf_token %}
+    <input class="form-control" type="text" size="50" name="starting" value="" id="start" />
+    <input class="form-control" type="text" size="50" name="ending" value="" id="end" />
+    <input class="btn btn-primary" type="submit" name="stocksubmit" value="Search" />
+</form>
+
+{% endblock %}
